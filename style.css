@@ -142,6 +142,10 @@ img {
   padding-top: 100px;
   padding-bottom: 70px; }
 
+
+
+
+
 /* :: 3.4.0 Section Heading */
 .section-heading {
   position: relative;
@@ -170,7 +174,7 @@ img {
       .section-heading.style-2 h2 {
         font-size: 24px; } }
 
-        /* Toby's Bullshit */
+/* Toby's Bullshit */
   #section-albums{
       height: 900px;
     } 
@@ -180,7 +184,6 @@ img {
       margin-top: 80px;
     }
 
-  
   #section-music{
     margin-bottom: 0px;
     background-color: rgb(255, 227, 253);
@@ -194,13 +197,14 @@ img {
   #section-socials{
     text-align: center;
   }
-    .featured-artist-thumb img{
+   
+  .featured-artist-thumb img{
       margin-top: 10px;
-      margin-left: 3px;
     }
+    
     .featured-artist-leg img{
       margin-top: 50px;
-      margin-left: 380px;
+      margin-left: 375px;
     }
     .featured-artist-arm img{
       margin-top: 40px;
@@ -213,7 +217,23 @@ img {
       margin-right: 0px;
     }
 
+    .featured-artist-thumb img,
+    .featured-artist-arm img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .section-heading h2.larger-font {
+      font-size: 40px ;
+    }
 
+    .image-container1{
+      margin-top: 100px;
+    }
+    .image-container1 img{
+      margin: 20px;
+    }
+    
 /* :: 3.5.0 Preloader */
 .preloader {
   background-color: #ffffff;
