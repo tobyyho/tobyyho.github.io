@@ -234,6 +234,11 @@ img {
       margin: 20px;
     }
     
+    .container {
+      overflow: hidden;
+    }
+
+
 /* :: 3.5.0 Preloader */
 .preloader {
   background-color: #ffffff;
