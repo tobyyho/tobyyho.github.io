@@ -93,10 +93,10 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: clamp(16px, 4vw, 40px);
   max-width: 1600px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: clamp(16px, 4vw, 40px) clamp(10px, 2vw, 20px);
   box-sizing: border-box;
   text-align: center;
 ">
@@ -108,7 +108,7 @@
     background-color: white;
     border: 5px solid black;
     border-radius: 5px;
-    padding: 20px;
+    padding: clamp(12px, 2.2vw, 20px);
     box-sizing: border-box;
   ">
     <img src="img/bg-img/welcome2heaven.gif" 
@@ -117,14 +117,14 @@
 
     <img src="img/bg-img/angell.png" 
          alt="Angel Image" 
-         style="width: 100%; height: auto; margin-top: 10px; border-radius: 5px;">
+         style="width: 100%; height: auto; margin-top: clamp(8px, 1.4vw, 10px); border-radius: 5px;">
   </div>
 
   <!-- Right Column: Lyrics + Game -->
   <div style="
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: clamp(10px, 2.2vw, 20px);
     flex: 1 1 500px;
     max-width: 600px;
     align-items: center;
@@ -132,14 +132,14 @@
   ">
 <link href="https://fonts.googleapis.com/css2?family=Geologica:wdth@75&display=swap" rel="stylesheet">
 
-<div style="transform: translateX(-18px);
+<div style="transform: translateX(clamp(-24px, -2vw, -8px));
   display: flex;
   flex-wrap: wrap;
   max-width: 90%;
-  gap: 15px 25px;
+  gap: clamp(8px, 1.4vw, 15px) clamp(12px, 2vw, 25px);
   font-family: 'Geologica', sans-serif;
   font-weight: 700;
-  font-size: 6rem;
+  font-size: clamp(2rem, 8vw, 6rem);
   font-stretch: 70%;
   text-transform: uppercase;
   color: hotpink;
@@ -150,19 +150,19 @@
   <span class="glow-word">A</span>
   <span style="white-space: nowrap;">
     <span class="glow-word">PRETTY</span>
-    <span class="glow-word" style="margin-left: 15px;">LIAR...</span>
+    <span class="glow-word" style="margin-left: clamp(6px, 1.2vw, 15px);">LIAR...</span>
   </span>
 </div>
 
     <!-- Game Box -->
     <div id="game-box" style="
   width: 95%;
-  height: 200px;
-  border: 3px solid black;
-  border-radius: 15px;
+  height: clamp(140px, 28vw, 200px);
+  border: clamp(2px, 0.45vw, 3px) solid black;
+  border-radius: clamp(8px, 2vw, 15px);
   position: relative;
   overflow: hidden;
-  margin-top: 40px;
+  margin-top: clamp(16px, 3.5vw, 40px);
   cursor: pointer;
   background-image: url('img/bg-img/pinkclouds.jpg'); 
   background-size: cover;
@@ -170,15 +170,15 @@
 ">
 <div id="click-hint" style="
   position: absolute;
-  top: 27px;
+  top: clamp(12px, 2.2vw, 27px);
   left: 51%;
   transform: translateX(-50%);
   background: rgba(248, 186, 233, 0.89);
   color: #333;
-  padding: 3px 8px;
-  font-size: 13px;
+  padding: clamp(2px, 0.6vw, 3px) clamp(4px, 1vw, 8px);
+  font-size: clamp(10px, 1.8vw, 13px);
   font-family: sans-serif;
-  border-radius: 6px;
+  border-radius: clamp(4px, 1.2vw, 6px);
   z-index: 10;
   pointer-events: none;
   opacity: 0.6;
@@ -189,16 +189,16 @@
   <!-- Speech Bubble -->
   <div id="chat-bubble" style="
     position: absolute;
-    bottom: 100px;
+    bottom: clamp(50px, 12vw, 100px);
     left: 50%;
     transform: translateX(-50%);
     background: white;
     color: black;
-    padding: 6px 10px;
-    border-radius: 12px;
-    font-size: 14px;
+    padding: clamp(4px, 1vw, 6px) clamp(8px, 1.4vw, 10px);
+    border-radius: clamp(8px, 1.6vw, 12px);
+    font-size: clamp(12px, 1.8vw, 14px);
     font-family: sans-serif;
-    border: 2px solid black;
+    border: clamp(1px, 0.4vw, 2px) solid black;
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -212,9 +212,9 @@
       transform: translateX(-50%);
       width: 0;
       height: 0;
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      border-top: 10px solid white;
+      border-left: clamp(4px, 0.9vw, 6px) solid transparent;
+      border-right: clamp(4px, 0.9vw, 6px) solid transparent;
+      border-top: clamp(8px, 1.3vw, 10px) solid white;
       filter: drop-shadow(0px 1px 1px black);
     "></div>
   </div>
@@ -224,9 +224,9 @@
   <button id="left-arrow" style="
     position: absolute;
     top: 50%;
-    left: 10px;
+    left: clamp(6px, 1vw, 10px);
     transform: translateY(-50%);
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 4vw, 2rem);
     background: transparent;
     color: white;
     border: none;
@@ -239,9 +239,9 @@
   <button id="right-arrow" style="
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: clamp(6px, 1vw, 10px);
     transform: translateY(-50%);
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 4vw, 2rem);
     background: transparent;
     color: white;
     border: none;
@@ -252,15 +252,17 @@
 
   <!-- Character -->
   <img id="character" src="img/bg-img/pixelangel.png" alt="Character" style="
-    width: 60px;
+    width: clamp(36px, 6vw, 60px);
     height: auto;
     position: absolute;
-    bottom: 22px;
-    left: calc(50% - 25px);
+    bottom: clamp(12px, 2vw, 22px);
+    left: 50%;
+    transform: translateX(-50%);
   ">
 </div>
 </div>
 </div>
+
 
 <!-- Glow Effect Styles -->
 <style>
